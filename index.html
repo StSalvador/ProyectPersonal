@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- PASO 1. El navegador debe utilizar el ancho real del celular. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACME | Menú responsive</title>
+  <link rel="icon" type="image/svg+xml" href="iconos/favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+  <!-- defer espera a que el HTML esté listo antes de ejecutar el JS. -->
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <!-- PASO 2. sticky en CSS mantiene este encabezado visible al bajar. -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <!-- Se conserva el logotipo original del archivo proporcionado. -->
+      <a class="marca" href="#inicio" aria-label="Luis Miguel, ir al inicio">
+        <img src="iconos/favicon.svg" alt="" width="42" height="42">
+        LM
+      </a>
+      <!-- PASO 3. El botón controla la navegación cuyo id es navegacion. -->
+      <!-- Un button ya funciona con clic, toque, Enter y espacio. -->
+      <button id="boton-menu" class="hamburguesa" type="button"
+              aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+        <span class="lineas" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span id="texto-menu">Menú</span>
+      </button>
+      <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Biografía</a></li>
+          <li>
+            <!-- El submenú que el profesor exige mantener -->
+            <details id="resolver" class="desplegable">
+              <summary>Álbumes Destacados</summary>
+              <ul class="submenu">
+                <li><a href="#servicios">Romance</a></li>
+                <li><a href="#orientador">Aries</a></li>
+                <li><a href="#contacto">20 años</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="recursos.html">Videoclips</a></li>
+        </ul>
+      </nav>
+  </div>
+</header>
+
+<main>
+  <!-- SECCIÓN INICIO -->
+  <section id="inicio" class="contenedor hero">
+    <div class="hero-texto">
+      <h1>EL SOL DE MÉXICO</h1>
+      <p>Toda una vida de romanticismo con los boleros que marcaron una época.</p>
+      <button class="btn-primario" onclick="location.href='#nosotros'"> VER BIOGRAFÍA </button>
+    </div>
+    <div class="hero-imagen">
+      <img src="img/portada.jpg" alt="Luis Miguel" class="foto-hero">
+    </div>
+  </section>
+
+  <!-- SECCIÓN DISCOGRAFÍA -->
+  <section id="discografia" class="contenedor albumes">
+    <h2>ÁLBUMES DESTACADOS</h2>
+    <div class="grid-albumes">
+      <article class="tarjeta-album" id="servicios">
+        <img src="img/romance.jpg" alt="Álbum Romance" class="foto-album">
+        <h3>Romance</h3>
+        <p>Romance (1991)<br>Boleros clásicos</p>
+        
+        <details class="desplegable-temas">
+          <summary class="btn-secundario"> Ver temas </summary>
+          <ul class="lista-canciones">
+            <li>1. No Me Platiques Más</li>
+            <li>2. Inolvidable</li>
+            <li>3. La Puerta</li>
+            <li>4. Contigo en la Distancia</li>
+            <li>5. Mucho Corazón</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="tarjeta-album" id="orientador">
+        <img src="img/aries.jpg" alt="Álbum Aries" class="foto-album">
+        <h3>ARIES</h3>
+        <p>ARIES (1993)<br>Pop latino</p>
+        
+        <details class="desplegable-temas">
+          <summary class="btn-secundario"> Ver temas </summary>
+          <ul class="lista-canciones">
+            <li>1. Suave</li>
+            <li>2. Hasta Que Me Olvides</li>
+            <li>3. Qué Nivel de Mujer</li>
+            <li>4. Ayer</li>
+            <li>5. Me Niego A Estar Solo</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="tarjeta-album" id="contacto">
+        <img src="img/20anos.jpg" alt="Álbum 20 años" class="foto-album">
+        <h3>20 años</h3>
+        <p>20 años (1990)<br>Balada</p>
+        
+        <details class="desplegable-temas">
+          <summary class="btn-secundario"> Ver temas </summary>
+          <ul class="lista-canciones">
+            <li>1. Entrégate</li>
+            <li>2. Oro de Ley</li>
+            <li>3. Tengo Todo Excepto a Ti</li>
+            <li>4. Será Que No Me Amas</li>
+            <li>5. Amante del Amor</li>
+          </ul>
+        </details>
+      </article>
+    </div>
+  </section>
+  <!-- SECCIÓN BIOGRAFÍA -->
+    <section id="nosotros" class="contenedor biografia">
+      <h2>BIOGRAFÍA</h2>
+      <div class="cuadro-biografia">
+        <p>Luis Miguel Gallego Basteri es uno de los cantantes más importantes y exitosos de la música en español. Conocido por su inconfundible estilo romántico, su absoluta seguridad en el escenario y su poderosa voz, ha conquistado géneros que van desde el pop hasta el mariachi.</p>
+        <p>Consolidado desde muy joven como "El Sol de México", se convirtió en un ícono cultural y el artista latino más vendido de los años 90 gracias a su histórica serie de discos "Romance", logrando que el bolero clásico trascendiera fronteras y marcara a toda una época.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>2026 Luis Miguel | Spotify | Apple Music | YouTube</p>
+    </div>
+  </footer>
+
+</body>
+</html>

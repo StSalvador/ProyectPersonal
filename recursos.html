@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videoclips - Luis Miguel</title>
+  <link rel="icon" type="image/svg+xml" href="iconos/favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html" aria-label="Luis Miguel, ir al inicio">
+        <img src="iconos/favicon.svg" alt="" width="42" height="42">
+        LM
+      </a>
+      
+      <button id="boton-menu" class="hamburguesa" type="button" aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+        <span class="lineas" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span id="texto-menu">Menú</span>
+      </button>
+
+      <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#nosotros">Biografía</a></li>
+          <li>
+            <details id="resolver" class="desplegable">
+              <summary>Discografía</summary>
+              <ul class="submenu">
+                <li><a href="index.html#servicios">Romance</a></li>
+                <li><a href="index.html#orientador">Aries</a></li>
+                <li><a href="index.html#contacto">20 años</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="recursos.html">Videoclips</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contenedor biografia">
+      <h2>VIDEOCLIP DESTACADOS</h2>
+      <div class="bio-contenido">
+        <p>Revive las mejores presentaciones en vivo y grandes éxitos de "El Sol de México".</p>
+        
+        <div class="grid-videos">
+          
+          <div class="video-item">
+            <h3>La Incondicional</h3>
+            <div class="video-responsive">
+              <iframe src="https://www.youtube.com/embed/FwXiue9-0Eg" title="La Incondicional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <h3>Pensar en Ti (En Vivo)</h3>
+            <div class="video-responsive">
+              <iframe src="https://www.youtube.com/embed/VQztBLyZ3y0" title="Pensar en Ti (En Vivo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <h3>Hasta Que Me Olvides (En Vivo)</h3>
+            <div class="video-responsive">
+              <iframe src="https://www.youtube.com/embed/CMyu2H56DBk" title="Hasta Que Me Olvides (En Vivo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <h3>No Existen Límites</h3>
+            <div class="video-responsive">
+              <iframe src="https://www.youtube.com/embed/vBjrW_juMbk" title="No Existen Límites" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>2026 Luis Miguel | Spotify | Apple Music | YouTube</p>
+    </div>
+  </footer>
+
+</body>
+</html>
